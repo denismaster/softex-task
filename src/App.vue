@@ -1,7 +1,9 @@
 <template>
   <div id="app">
     <Header/>
-    <router-view/>
+    <div class="content">
+      <router-view/>
+    </div>
   </div>
 </template>
 
@@ -16,3 +18,11 @@ export default Vue.extend({
   }
 });
 </script>
+
+<style>
+  @media(min-width: 767px) {
+    .content{
+      margin: 1rem;
+    }
+  }
+</style>

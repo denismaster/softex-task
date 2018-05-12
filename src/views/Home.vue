@@ -1,8 +1,16 @@
 <template>
-  <div class="container home">
-    <carousel :paginationEnabled="true">
+  <div class="home">
+    <carousel 
+      :paginationEnabled="true"
+      :paginationColor="'#eee'"
+      :paginationActiveColor="'#ccc'"
+      :perPageCustom="perPageCustom"
+      :scrollPerPage="true"
+    >
         <slide v-for="image in images" :key="image">
-          <img :src="image" alt="" width="220" height="176">
+          <div class="image-wrapper">
+            <img :src="image" alt="" width="220" height="176">
+          </div>
         </slide>
     </carousel>
     <br v-for="n in 35" :key="n"/>
@@ -23,7 +31,11 @@ export default Vue.extend({
   name: "home",
   data() {
     return {
-      images
+      images,
+      perPageCustom:[
+        [320,1] , //if screen is mobile show only 1 item
+        [768,3], //3 slides for desktop
+      ]
     };
   }
 });
@@ -31,8 +43,14 @@ export default Vue.extend({
 
 <style>
   .home{
+    padding:1rem;
     background-color: white;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+
+  .image-wrapper {
+    display: flex;
+    justify-content: center;
   }
 </style>
 
