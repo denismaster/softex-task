@@ -23,10 +23,15 @@ export default Vue.extend({
 <style>
 .header {
     background-color: white !important;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
 .header.header-sticky{
     position: sticky;
     top:0;
+}
+
+.header.header-centered .navbar-collapse{
+    justify-content: center !important;
 }
 </style>
