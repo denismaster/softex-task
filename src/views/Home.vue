@@ -1,18 +1,37 @@
 <template>
-  <div class="home">
-    <img src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+  <div class="container home">
+    <carousel :paginationEnabled="true">
+        <slide v-for="image in images" :key="image">
+          <img :src="image" alt="" width="220" height="176">
+        </slide>
+    </carousel>
   </div>
 </template>
 
 <script lang="ts">
-import Vue from 'vue';
-import HelloWorld from '@/components/HelloWorld.vue'; // @ is an alias to /src
+import Vue from "vue";
+
+const images: string[] = [
+  "/img/captain.jpg",
+  "/img/strange.jpg",
+  "/img/food.jpg",
+  "/img/chase.jpg"
+];
 
 export default Vue.extend({
-  name: 'home',
-  components: {
-    HelloWorld,
-  },
+  name: "home",
+  data() {
+    return {
+      images
+    };
+  }
 });
 </script>
+
+<style>
+  .home{
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+</style>
+
