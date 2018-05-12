@@ -29,6 +29,7 @@ export default Vue.extend({
 .header.header-sticky{
     position: sticky;
     top:0;
+    z-index: 1000;
 }
 
 .header.header-centered .navbar-collapse{

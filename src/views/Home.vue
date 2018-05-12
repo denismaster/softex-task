@@ -5,6 +5,7 @@
           <img :src="image" alt="" width="220" height="176">
         </slide>
     </carousel>
+    <br v-for="n in 35" :key="n"/>
   </div>
 </template>
 
