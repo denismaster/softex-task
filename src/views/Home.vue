@@ -13,7 +13,7 @@
         >
           <div class="image-wrapper">
             <a :href="image">
-              <img :src="image" alt="" width="320" height="276">
+              <img :src="image" alt="">
             </a>
           </div>
         </slide>
@@ -50,12 +50,6 @@ export default Vue.extend({
 </script>
 
 <style>
-  .home{
-    padding:1rem;
-    background-color: white;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  }
-
   .image-wrapper {
     display: flex;
     justify-content: center;

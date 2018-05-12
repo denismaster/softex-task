@@ -35,4 +35,13 @@ export default Vue.extend({
 .header.header-centered .navbar-collapse{
     justify-content: center !important;
 }
+
+.header .nav-link:hover{
+    color:#42b983 !important;
+}
+
+.header .nav-link.router-link-exact-active{
+    color:#42b983 !important;
+    font-weight: 600;
+}
 </style>
