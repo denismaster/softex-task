@@ -7,7 +7,10 @@
       :perPageCustom="perPageCustom"
       :scrollPerPage="true"
     >
-        <slide v-for="image in images" :key="image">
+        <slide 
+          v-for="image in images" 
+          :key="image"
+        >
           <div class="image-wrapper">
             <img :src="image" alt="" width="220" height="176">
           </div>
@@ -24,7 +27,10 @@ const images: string[] = [
   "/img/captain.jpg",
   "/img/strange.jpg",
   "/img/food.jpg",
-  "/img/chase.jpg"
+  "/img/chase.jpg",
+  "/img/mountain.jpg",
+  "/img/ferrari.jpg",
+  "/img/kratos.jpg",
 ];
 
 export default Vue.extend({
