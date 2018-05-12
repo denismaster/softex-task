@@ -12,7 +12,9 @@
           :key="image"
         >
           <div class="image-wrapper">
-            <img :src="image" alt="" width="220" height="176">
+            <a :href="image">
+              <img :src="image" alt="" width="320" height="276">
+            </a>
           </div>
         </slide>
     </carousel>
